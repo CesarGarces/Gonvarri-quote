@@ -1,0 +1,28 @@
+<template name="topNavbar">
+    <div class="row border-bottom">
+        <nav class="navbar navbar-static-top
+        {{isActiveRoute regex='catalogo' className='azul-medio-bg'}}
+        {{isActiveRoute regex='cotizacion' className='azul-claro-bg'}}
+        {{isActiveRoute regex='selecbandeja' className='azul-tenue-bg'}}
+        {{isActiveRoute regex='distribuidores' className='aguamarina-azulado-bg'}}
+        {{isActiveRoute regex='documentos' className='aguamarina-medio-bg'}}
+        {{isActiveRoute regex='videos' className='aguamarina-verdoso-bg'}}"
+        role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a id="navbar-minimalize" class="minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+
+
+
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a href="{{pathFor route='login'}}" class="logout">
+                        <i class="fa fa-sign-out"></i> Salir
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </div>
+</template>

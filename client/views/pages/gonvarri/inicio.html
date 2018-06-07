@@ -1,0 +1,97 @@
+<template name="inicio">
+
+    <!-- Page heading -->
+    {{> pageHeading title='Inicio'  }}
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+              <a class="widget style1 azul-medio-bg" href="{{pathFor route='catalogo'}}">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <i class="fa fa-cubes fa-5x"></i>
+                      </div>
+                      <div class="col-sm-8 col-xs-12 text-right">
+                        <span>Explore nuestro</span>
+                          <h2 class="font-bold"> Catálogo Digital</h2>
+
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+              <a class="widget style1 azul-claro-bg" href="{{pathFor route='cotizacion'}}">
+                  <div class="row">
+                      <div class="col-sm-4 col-xs-12">
+                          <i class="fa fa-shopping-cart fa-5x"></i>
+                      </div>
+                      <div class="col-sm-8 col-xs-12 text-right">
+                          <span> Solicite ahora su</span>
+                          <h2 class="font-bold">Cotización Vía Mail</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+              <a class="widget style1 azul-tenue-bg" href="{{pathFor route='selecbandeja'}}">
+                  <div class="row">
+                      <div class="col-sm-4 col-xs-12 col-md-1">
+                          <i class="fa fa-sliders fa-5x"></i>
+                      </div>
+                      <div class="col-sm-8 col-xs-12 col-md-11 text-right">
+                          <span>Ajuste su diseño con el</span>
+                          <h2 class="font-bold">Seleccionador de  Bandeja</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+              <a class="widget style1 aguamarina-azulado-bg" href="{{pathFor route='distribuidores'}}">
+                  <div class="row">
+                      <div class="col-sm-4 col-xs-12 col-md-2">
+                          <i class="fa fa-map-marker fa-5x"></i>
+                      </div>
+                      <div class="col-sm-8 col-xs-12 col-md-10 text-right">
+                          <span>Consulte y revise nuestra </span>
+                          <h2 class="font-bold">Lista de Distribuidores</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+              <a class="widget style1 aguamarina-medio-bg" href="{{pathFor route='documentos'}}">
+                  <div class="row">
+                      <div class="col-sm-4 col-xs-12 col-md-2">
+                          <i class="fa fa-file-pdf-o fa-5x"></i>
+                      </div>
+                      <div class="col-sm-8 col-xs-12 col-md-10 text-right">
+                          <span>Descargue y visualice nuestros</span>
+                          <h2 class="font-bold">Documentos y Formatos</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+              <a class="widget style1 aguamarina-verdoso-bg" href="{{pathFor route='videos'}}">
+                  <div class="row">
+                      <div class="col-sm-4 col-xs-12 col-md-2">
+                          <i class="fa fa-video-camera fa-5x"></i>
+                      </div>
+                      <div class="col-sm-8 col-xs-12 col-md-10 text-right">
+                          <span>Explore y suscribase a nuestro</span>
+                          <h2 class="font-bold">Canal de Videos</h2>
+                      </div>
+                  </div>
+              </a>
+          </div>
+        </div>
+
+
+    </div>
+</template>

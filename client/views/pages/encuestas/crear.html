@@ -1,0 +1,359 @@
+<template name="crearEncuesta">
+
+    <!-- Page heading -->
+    {{> pageHeading title='Crear una Encuesta' category='Encuestas' }}
+
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Generalidades <small>detalles básicos de encuesta</small></h5>
+                        {{>iboxTools}}
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Encuesta</h3>
+
+                                <form role="form">
+                                    <div class="form-group"><label>Nombre</label> <input type="nombre" placeholder="Nombre de la encuesta" class="form-control"></div>
+                                    <div class="form-group"><label>Tipo de encuesta</label> <input type="text" placeholder="Ingrese el tipo de encuesta" class="form-control"></div>
+                                    <div class="form-group"><label>Alias</label> <input type="text" placeholder="Ingrese un identificador de encuesta" class="form-control"></div>
+                                    <div class="form-group"><label>Destino a encuestar</label> <input type="text" placeholder="ingrese los datos para encuesta" class="form-control"></div>
+                                    <div class="form-group"><label>Introducción</label> <textarea rows="4" type="text" placeholder="Texto introductorio, puede usar %nombrecliente%, %numeroidentidad% o cualquier campo definido previamente en la carga de datos" class="form-control"></textarea></div>
+
+                                </form>
+                            </div>
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Estilo</h3>
+                                <p>Defina el estilo de la encuesta.</p>
+                                <form role="form">
+
+                                  <div class="form-group">
+                                      <h5>Color corporativo</h5>
+                                      <input type="text" class="form-control demo1" value="#5367ce" />
+                                      <h5>Color texto encabezado</h5>
+                                      <input type="text" class="form-control demo2" value="#5367ce" />
+                                      <div class="ibox-title  back-change">
+                                          <h5>Ejemplo <small>ejemplo color corporativo</small></h5>
+                                          {{>iboxTools}}
+                                      </div>
+                                      <br/>
+
+                                    </div>
+                                    <div class="form-group"><label>Estilo de cuestionario</label> <input type="password" placeholder="Password" class="form-control"></div>
+                                    <div class="form-group"><label>Estilo de elementos</label> <input type="password" placeholder="Password" class="form-control"></div>
+                                    <div>
+                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Guardar</strong></button>
+                                        <label> <input type="checkbox" class="i-checks"> Ver lista de encuestas </label>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Pregunta <small>agregar pregunta a la encuesta</small></h5>
+                        {{>iboxTools}}
+                    </div>
+                    <div class="ibox-content">
+                      <div class="table-responsive">
+                          <table class="table  table-striped table-hover ">
+                              <thead>
+                              <tr>
+                                  <th>id</th>
+                                  <th>Alias</th>
+                                  <th>Tipo</th>
+                                  <th>creado</th>
+                                  <th>validación</th>
+                                  <th>condicional</th>
+                                  <th>acciones</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1</td>
+                                  <td>Pregunta1</td>
+                                  <td>lista de selección</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>no vacía</td>
+                                  <td>NO</td>
+                                  <td>
+                                    <div class="">
+                                        <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                        <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                        <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                        <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                    </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>2</td>
+                                  <td>Pregunta2</td>
+                                  <td>Radio</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>No vacía</td>
+                                  <td>No</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>3</td>
+                                  <td>Pregunta3</td>
+                                  <td>texto</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>alfanumérico</td>
+                                  <td>No</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>4</td>
+                                  <td>Pregunta4</td>
+                                  <td>checklist</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>ninguna</td>
+                                  <td>Si</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>5</td>
+                                  <td>Pregunta5</td>
+                                  <td>radio</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>no vacía</td>
+                                  <td>SI</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>6</td>
+                                  <td>Pregunta6</td>
+                                  <td>seleccion</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>no vacía</td>
+                                  <td>NO</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info " title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>7</td>
+                                  <td>Pregunta7</td>
+                                  <td>texto</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>alfanumérico</td>
+                                  <td>no</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+
+
+
+                              </tbody>
+                          </table>
+
+
+                      </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Pregunta</h3>
+
+                                <form role="form">
+                                    <div class="form-group"><label>Pregunta</label> <input type="nombre" placeholder="Texto de la pregunta" class="form-control"></div>
+                                    <div class="form-group"><label>Alias</label> <input type="text" placeholder="identificador de pregunta" class="form-control"></div>
+                                    <div class="form-group"><label>Tipo</label> <select class="form-control m-b" name="validacion">
+                                        <option>Texto</option>
+                                        <option>Checkbox</option>
+                                        <option>Radio</option>
+                                        <option>lista de selección</option>
+                                        <option>Área de texto</option>
+                                        <option>Lista de múltiple selección</option>
+                                    </select></div>
+                                    <div class="form-group"><label>Descripción</label> <input type="text" placeholder="Descrpción de la encuesta" class="form-control"></div>
+                                    <div class="form-group"><label>Respuestas</label> <input type="text" placeholder="Respuestas o placeholder" class="form-control"></div>
+
+                                    <div>
+                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Agregar Pregunta</strong></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Validaciones</h3>
+                                <p>Defina las validaciones de la pregunta.</p>
+                                <form role="form">
+                                    <div class="form-group"><label>Validación</label> <select class="form-control m-b" name="validacion">
+                                        <option>Ninguna</option>
+                                        <option>No vacía</option>
+                                        <option>Alfanumérica</option>
+                                        <option>email válido</option>
+                                        <option>numérico</option>
+                                    </select></div>
+                                    <div class="form-group"><label>Mensaje de Error</label> <input type="text" placeholder="Mensaje para el usuario" class="form-control"></div>
+                                    <div class="form-group"><label>Ayuda emregente de pregunta</label> <input type="text" placeholder="Ayuda para ingresar la información" class="form-control"></div>
+                                    <div class="form-group">
+                                      <label> <input type="checkbox" class="i-checks"> Usar condicional </label>
+
+                                      <div class="hr-line-dashed"></div>
+                                      <div class="text-center">
+                                          <a data-toggle="modal" class="btn btn-primary" href="#modal-form">Agregar Condicional</a>
+                                      </div>
+                                      <div id="modal-form" class="modal fade" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                  <div class="modal-body">
+                                                    <div class="row">
+                                                          <div class="table-responsive">
+                                                              <table class="table  table-striped table-hover ">
+                                                                  <thead>
+                                                                  <tr>
+                                                                      <th>id</th>
+                                                                      <th>Condición</th>
+                                                                      <th>Ocultar</th>
+                                                                      <th>Ubicar en</th>
+                                                                      <th>acciones</th>
+                                                                  </tr>
+                                                                  </thead>
+                                                                  <tbody>
+                                                                  <tr>
+                                                                      <td>1</td>
+                                                                      <td>Respuesta &gt; 6</td>
+                                                                      <td>3,4,5</td>
+                                                                      <td>6</td>
+                                                                      <td>
+                                                                        <div class="">
+                                                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                                                        </div>
+                                                                      </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                      <td>2</td>
+                                                                      <td>3 &lt;= Respuesta &lt; 6 </td>
+                                                                      <td>6</td>
+                                                                      <td>3</td>
+                                                                      <td>
+                                                                            <div class="">
+                                                                                <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                                                                <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                                                                <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                                                            </div>
+                                                                        </td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                      <td>3</td>
+                                                                      <td>Respuesta &lt; 3 </td>
+                                                                      <td>3,4,5,6</td>
+                                                                      <td>7</td>
+                                                                      <td>
+                                                                            <div class="">
+                                                                                <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                                                                <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                                                                <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                                                            </div>
+                                                                        </td>
+                                                                  </tr>
+
+
+
+
+                                                                  </tbody>
+                                                              </table>
+
+                                                          </div>
+                                                      </div>
+
+                                                      <div class="row">
+                                                          <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Condicional</h3>
+
+                                                              <p>Seleccione una condición y sus respectivos límites.</p>
+
+                                                              <form role="form">
+                                                                  <div class="form-group"><label>Condicion</label> <select class="form-control m-b" name="account">
+                                                                      <option>Ninguna</option>
+                                                                      <option>Respuesta Igual a Dato A</option>
+                                                                      <option>Respuesta Mayor a Dato A</option>
+                                                                      <option>Respuesta entre Dato A y Dato B</option>
+                                                                      <option>Respuesta Menor que Dato A</option>
+                                                                      <option>Respuesta Diferente a Dato B</option>
+                                                                      <option>Respuesta Afuera de rango entre Dato A y Dato B</option>
+
+                                                                  </select></div>
+                                                                  <div class="form-group"><label>Dato A</label> <input placeholder="primer dato respuesta" type="text" class="form-control"></div>
+                                                                  <div class="form-group"><label>Dato B </label> <input placeholder="segundo dato respuesta" type="text" class="form-control"></div>
+                                                                  <div class="form-group"><label>Ocultar</label> <input placeholder="preguntas a ocultar" type="text" class="form-control"></div>
+                                                                  <div class="form-group"><label>Redirigir a</label> <input placeholder="pregunta que recibe el focus" type="text" class="form-control"></div>
+                                                                  <div>
+                                                                      <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Agregar Condición</strong></button>
+
+                                                                  </div>
+                                                              </form>
+                                                          </div>
+
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</template>

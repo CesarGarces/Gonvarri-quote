@@ -1,0 +1,298 @@
+<template name="catalogo">
+
+    <!-- Page heading -->
+    {{> pageHeading title='Catálogo Digital' }}
+
+    <div class="wrapper wrapper-content animated fadeInRight ">
+
+        <div class="row">
+          <div class="col-lg-4">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title">
+                      <h5 class="tag-title">Filtrar</h5>   {{>iboxTools}}
+                  </div>
+                  <div class="ibox-content">
+                    <div class="row">
+
+                      <ul class="tag-list" style="padding: 0">
+                          <li><a href="">Bandejas</a></li>
+                          <li><a href="">Canaletas</a></li>
+                          <li><a href="">Consolas</a></li>
+                          <li><a href="">Empotrables</a></li>
+                          <li><a href="">Techo</a></li>
+                          <li><a href="">Suelo</a></li>
+                          <li><a href="">Pared</a></li>
+                      </ul>
+                    </div>
+                    </div>
+                    <div class="ibox-title">
+                        <h3>Menú</h3>
+                        <h5><small>categorizado y perfilado.</small></h5>
+                        {{>iboxTools}}
+                    </div>
+                    <div class="ibox-content">
+                    <div class="row">
+                    <select class="select2_demo_1 form-control">
+                        <option value="1">bandeja</option>
+                        <option value="2">bandeja1</option>
+                        <option value="3">bandeja2</option>
+                        <option value="4">bandeja3</option>
+                        <option value="5">Cubierta1</option>
+                        <option value="5">Cubierta2</option>
+                        <option value="5">Cubierta 3</option>
+                        <option value="5">Divisor 1</option>
+                        <option value="5">Divisor 2</option>
+                        <option value="5">Divisor 3</option>
+                        <option value="5">Divisor 4</option>
+                        <option value="5">Acoplador 1</option>
+                        <option value="5">Acoplador 2</option>
+                        <option value="5">Acoplador 3</option>
+                        <option value="5">Acoplador 4</option>
+                        <option value="5">Option 5</option>
+                    </select>
+                  </div>
+                  </div>
+                  <div class="row">
+
+                      <div id="jstree1">
+                          <ul>
+                              <li class="jstree-closed">Bandejas, Cubiertas, Divisores
+                                  <ul>
+                                      <li>Bandejas
+                                          <ul>
+                                              <li data-jstree='{"type":"css"}'>bandeja1</li>
+                                              <li data-jstree='{"type":"css"}'>bandeja2</li>
+                                              <li data-jstree='{"type":"css"}'>bandeja3</li>
+                                          </ul>
+                                      </li>
+                                      <li>Cubiertas
+                                          <ul>
+                                              <li data-jstree='{"type":"html"}'>cubierta1</li>
+                                              <li data-jstree='{"type":"html"}'>cubierta2</li>
+                                              <li data-jstree='{"type":"html"}'>cubierta3</li>
+                                          </ul>
+                                      </li>
+                                      <li>Divisores
+                                          <ul>
+                                              <li data-jstree='{"type":"svg"}'>divisor1</li>
+                                              <li data-jstree='{"type":"svg"}'>divisor2</li>
+                                              <li data-jstree='{"type":"svg"}'>divisor3</li>
+                                              <li data-jstree='{"type":"svg"}'>divisor4</li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                                </li>
+                                <li class="jstree-closed">Acopladores
+                                          <ul>
+                                              <li data-jstree='{"type":"img"}'>Acoplador1</li>
+                                              <li data-jstree='{"type":"img"}'>Acoplador2</li>
+                                              <li class="text-navy" data-jstree='{"type":"img"}'>Acoplador3</li>
+                                              <li class="text-navy" data-jstree='{"type":"img"}'>Acoplador4</li>
+                                          </ul>
+                                </li>
+                                <li class="jstree-closed">Montura de Pared (Horizontal)
+                                          <ul>
+                                              <li data-jstree='{"type":"js"}'>Montura H1</li>
+                                              <li data-jstree='{"type":"js"}'>Montura H2</li>
+                                              <li data-jstree='{"type":"js"}'>Montura H3</li>
+                                              <li data-jstree='{"type":"js"}'>Montura H5</li>
+                                              <li  class="text-navy" data-jstree='{"type":"js"}'>Montura H6</li>
+                                          </ul>
+                                </li>
+                                <li class="jstree-closed">Montura de Pared (Vertical)
+                                  <ul>
+                                      <li data-jstree='{"type":"html"}'> affix</li>
+                                      <li data-jstree='{"type":"html"}'> dashboard</li>
+                                      <li data-jstree='{"type":"html"}'> buttons</li>
+                                      <li data-jstree='{"type":"html"}'> calendarsocket</li>
+                                      <li data-jstree='{"type":"html"}'> contactswall</li>
+                                      <li data-jstree='{"type":"html"}'> restorator</li>
+                                    </ul>
+                          </li>
+                          <li class="jstree-closed">Montura de Techo
+                            <ul>
+
+                                      <li  class="text-navy" data-jstree='{"type":"html"}'> flot_chart.html</li>
+                                      <li  class="text-navy" data-jstree='{"type":"html"}'> google_maps.html</li>
+                                      <li data-jstree='{"type":"html"}'> icons.html</li>
+                                      <li data-jstree='{"type":"html"}'> inboice.html</li>
+                                      <li data-jstree='{"type":"html"}'> login.html</li>
+                                      <li data-jstree='{"type":"html"}'> {{pathFor route='mailbox'}}</li>
+                                      <li data-jstree='{"type":"html"}'> {{pathFor route='profile'}}</li>
+                                      <li  class="text-navy" data-jstree='{"type":"html"}'> register.html</li>
+                                      <li data-jstree='{"type":"html"}'> timeline.html</li>
+                                      <li data-jstree='{"type":"html"}'> video.html</li>
+                                      <li data-jstree='{"type":"html"}'> widgets.html</li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                    </div>
+
+              </div>
+          </div>
+            <div class="col-lg-8">
+
+                <div class="ibox product-detail">
+                    <div class="ibox-content">
+
+                        <div class="row">
+                            <div class="col-md-7">
+
+
+                                <div class="product-images">
+
+                                    <div>
+                                        <div class="image-imitation">
+                                            [IMAGE 1]
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="image-imitation">
+                                            [IMAGE 2]
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="image-imitation">
+                                            [IMAGE 3]
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-5">
+
+                                <h2 class="font-bold m-b-xs">
+                                    Bandeja de Recubrimiento
+                                </h2>
+
+                                <hr>
+
+                                <h4>Descripción del Producto</h4>
+
+                                <div class="small text-muted">
+
+                                    There are many variations of passages of Lorem Ipsum available, but the majority
+                                    have suffered alteration in some form, by injected humour, or randomised words
+                                    which don't look even slightly believable.
+                                </div>
+                                <dl class="small m-t-md">
+                                    <dt>Description lists</dt>
+                                    <dd>A description list is perfect for defining terms.</dd>
+                                    <dt>Euismod</dt>
+                                    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                    <dt>Malesuada porta</dt>
+                                    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                </dl>
+                                <hr>
+
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="ibox-footer">
+                      <div class="ibox-content">
+
+                        <div class="table-responsive">
+                            <table class="table  table-striped table-hover ">
+                                <thead>
+                                <tr>
+                                    <th>Ref</th>
+                                    <th>Item</th>
+                                    <th>medidas</th>
+
+                                    <th>espacio</th>
+
+                                    <th>acciones</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>001-b</td>
+                                    <td>Bandeja gondolada</td>
+                                    <td>30/100</td>
+
+                                    <td>17%</td>
+
+                                    <td>
+                                      <div class="">
+                                            <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Añadir a la cotización</button>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>001-a</td>
+                                    <td>Bandeja gondolada</td>
+                                    <td>30/300</td>
+
+                                    <td>17%</td>
+
+                                    <td>
+                                      <div class="">
+                                            <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Añadir a la cotización</button>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>001-b</td>
+                                    <td>Bandeja gondolada</td>
+                                    <td>30/400</td>
+
+                                    <td>17%</td>
+
+                                    <td>
+                                      <div class="">
+                                            <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Añadir a la cotización</button>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>001-c</td>
+                                    <td>Bandeja gondolada</td>
+                                    <td>30/500</td>
+
+                                    <td>17%</td>
+
+                                    <td>
+                                      <div class="">
+                                            <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Añadir a la cotización</button>
+                                      </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>001-d</td>
+                                    <td>Bandeja gondolada</td>
+                                    <td>30/600</td>
+
+                                    <td>17%</td>
+
+                                    <td>
+                                      <div class="">
+                                            <button class="btn btn-primary btn-sm"><i class="fa fa-cart-plus"></i> Añadir a la cotización</button>
+                                      </div>
+                                    </td>
+                                </tr>
+
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</template>

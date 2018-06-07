@@ -1,0 +1,300 @@
+<template name="crearUsuario2">
+  <div class="row wrapper border-bottom white-bg page-heading">
+          <div class="col-lg-10">
+              <h2>Nuevo usuario</h2>
+              <ol class="breadcrumb">
+                  <li>
+                      <a href="http://localhost/izo/private/panel.php">Inicio</a>
+                  </li>
+                  <li>
+                      <a href="http://localhost/izo/private/user_list.php">Usuarios</a>
+                  </li>
+
+                  <li class="active">
+                      <strong>Nuevo usuario</strong>
+                  </li>
+              </ol>
+          </div>
+      </div>
+  <div class="wrapper wrapper-content  animated fadeInRight">
+
+      <div class="row">
+  <div class="col-lg-12">
+      <div class="ibox">
+          <div class="ibox-content">
+
+
+              <div class="row">
+  <form role="form" action="http://localhost/izo/private/new_user_exe.php" method="post" enctype="multipart/form-data">
+  <div class="col-sm-4">
+
+  <div class="panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title">Caracterísitcas Básicas</h3></div>
+      <div class="panel-body">
+          <fieldset>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="control-group">
+                      <label label-default="" class="control-label">Identificación *</label>
+                      <div class="controls">
+                          <input type="text" class="form-control" title="Identificación" required="" name="identificacion" value="">
+                      </div>
+                    </div>
+               </div><!--col-->
+               <div class="col-md-6">
+                  <div class="control-group">
+                      <label label-default="" class="control-label">Tipo Identificación *</label>
+                      <div class="controls">
+                          <select class="form-control required m-b valid" name="TipoIdentificacion" required="">
+                              <option value="">Seleccione</option>
+                              <option value="1">CC</option>
+                              <option value="2">Pasaporte</option>
+                              <option value="3">Contraseña</option>
+                          </select>
+                      </div>
+                  </div>
+                </div><!--col-->
+              </div><!--row-->
+              <div class="row">
+                <div class="col-md-12">
+                   <div class="control-group">
+                      <label label-default="" class="control-label">Empresa *</label>
+                      <div class="controls">
+                          <select class="form-control required m-b valid" name="Empresa" required="">
+                              <option value="">Seleccione</option>
+                              <option value="1">IZO Colombia</option>
+                              <option value="2">Tigo Une</option>
+                          </select>
+                      </div>
+                  </div>
+                </div><!--col-->
+            </div><!--row-->
+            <div class="row">
+                <div class="col-md-6">
+                   <div class="control-group">
+                      <label label-default="" class="control-label">Rol *</label>
+                      <div class="controls">
+
+
+              <select class="form-control required m-b valid" name="Rol" required="">
+                              <option value="">Seleccione</option>
+                                                                  <option value="1">Consultor</option>
+
+
+                                                              <option value="2">Usuario</option>
+
+
+                                                              <option value="3">Administrador</option>
+
+
+                                                              <option value="6">Usuario Administrativo</option>
+
+
+                                              </select>
+                      </div>
+                  </div>
+                </div><!--col-->
+
+
+                <div class="col-md-6">
+                   <div class="control-group">
+                      <label label-default="" class="control-label">Estado *</label>
+                      <div class="controls">
+                          <select class="form-control required m-b valid" id="Estado" name="Estado" aria-required="true" aria-invalid="false"><option value="1">Activo</option>
+                              <option value="2">Inactivo</option>
+                          </select>
+                      </div>
+                  </div>
+                </div><!--col-->
+                <div class="col-md-6">
+                   <div class="control-group">
+                      <label label-default="" class="control-label">Estado Civil</label>
+                          <select class="form-control m-b valid" id="EstadoCivil" name="EstadoCivil" aria-invalid="false"><option value="">Seleccione</option>
+                              <option value="1">Casado</option>
+                              <option value="2">Soltero</option>
+                              <option value="3">Viudo</option>
+                          </select>
+                          <div class="controls">
+                      </div>
+                  </div>
+                </div><!--col-->
+
+                <div class="col-md-6">
+                   <div class="control-group">
+                      <label label-default="" class="control-label">Genero *</label>
+                      <div class="controls">
+                          <select class="form-control required m-b valid" id="Genero" name="Genero" aria-required="true" aria-invalid="false"><option value="">Seleccione</option>
+                              <option value="1">Masculino</option>
+                              <option value="2">Femenino</option>
+                          </select>
+                      </div>
+                  </div>
+                </div><!--col-->
+
+              </div><!--row-->
+
+
+
+          </fieldset><!--/end form-->
+      </div><!--panel-body-->
+  </div>
+  </div> <!--col-->
+  <div class="col-sm-4">
+  <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+          <h3 class="panel-title">Cuenta</h3>
+        </div>
+        <div class="panel-body">
+
+        <fieldset>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="control-group">
+                  <label label-default="" class="control-label">Nombre de inicio de sesion *</label>
+                  <div class="controls">
+                      <input type="text" class="form-control" title="login" required="" name="Login" value="">
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+            <div class="control-group">
+                <label label-default="" class="control-label">Clave *</label>
+                <div class="controls">
+                    <input type="password" class="form-control" title="clave" required="" name="pass" value="">
+                </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="control-group">
+                <label label-default="" class="control-label">Correo *</label>
+                <div class="controls">
+                    <input type="mail" class="form-control" title="email" required="" name="Email" value="">
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+    </fieldset>
+  </div><!--/panel-body-->
+  </div><!--/panel-default-->
+  </div>
+
+  <fieldset>
+  <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+          <h3 class="panel-title">Información Personal</h3>
+        </div>
+        <div class="panel-body">
+
+        <fieldset>
+      <div class="row">
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Primer Nombre *</label>
+                <div class="controls">
+                    <input type="text" class="form-control" title="primer nombre" required="" name="PrimerNombre" value="">
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Segundo Nombre</label>
+                <div class="controls">
+                    <input type="text" class="form-control" title="segindo nombre" name="SegundoNombre" value="">
+                </div>
+            </div>
+          </div>
+        </div><!--/row-->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Primer Apellido *</label>
+                <div class="controls">
+                    <input type="text" class="form-control" title="Primer Apellido" required="" name="PrimerApellido" value="">
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Segundo Apellido</label>
+                <div class="controls">
+                    <input type="text" class="form-control" title="fSegundo Apellido" name="SegundoApellido" value="">
+                </div>
+            </div>
+          </div>
+        </div><!--/row-->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Celular *</label>
+                <div class="controls">
+                    <input type="text" class="form-control" title="Celular" required="" name="Celular" value="">
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Teléfono</label>
+                <div class="controls">
+                    <input type="text" class="form-control" title="Teléfono" name="Telefono" value="">
+                </div>
+            </div>
+          </div>
+        </div><!--/row-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="control-group">
+                <label label-default="" class="control-label">Dirección</label>
+                <div class="controls">
+                    <input type="text" class="form-control" title="Dirección" name="Direccion" value="">
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Fecha Nacimiento *</label>
+                <div class="controls">
+                    <input class="form-control required m-b" data-val="true" data-val-date="The field FechaNacimiento must be a date." id="FechaNacimiento" name="FechaNacimiento" type="date" value="1/1/0001 12:00:00 AM" required="">
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="control-group">
+                <label label-default="" class="control-label">Imagen</label>
+                <div class="controls">
+                    <input type="file" name="imagen">
+                </div>
+            </div>
+          </div>
+        </div><!--/row-->
+
+
+      <div class="row">
+           <div class="col-md-3">
+
+           </div>
+           <div class="col-md-9">
+               <div class="controls pull-right">
+                   <button type="submit" class="btn btn-primary enviar">Guardar</button>
+                   <a class="btn btn-white" href="http://localhost/izo/private/user_list.php">Cancel</a>
+               </div>
+           </div>
+      </div>
+    </fieldset>
+  </div><!--/panel-body-->
+  </div>
+
+  </fieldset></form></div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+
+</template>

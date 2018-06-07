@@ -1,0 +1,3 @@
+Template.documentos.rendered = function(){
+
+}

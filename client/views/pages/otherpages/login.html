@@ -1,0 +1,26 @@
+<template name="login">
+
+  <div class="middle-box text-center loginscreen animated fadeInDown">
+    <div class="form login-form" >
+      <div class="panel-trans">
+        <div>
+          <img src="img/logo.png" width="150" height="110">
+        </div>
+
+          <h3>Bienvenido a IZO Board</h3>
+
+          <p>Ingrese con su cuenta local.</p>
+          <form class="m-t down" role="form" action="users/session_init.php">
+              <div class="form-group">
+                  <input type="text" class="form-control" name="login" placeholder="Username" required="">
+              </div>
+              <div class="form-group">
+                  <input type="password" class="form-control" name="password" placeholder="Password" required="">
+              </div>
+              <button type="submit" class="btn btn-primary block full-width m-b">Ingresar</button>
+          </form>
+
+          </div>
+      </div>
+  </div>
+</template>

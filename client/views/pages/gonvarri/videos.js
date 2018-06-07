@@ -1,0 +1,3 @@
+Template.videos.rendered = function(){
+
+}

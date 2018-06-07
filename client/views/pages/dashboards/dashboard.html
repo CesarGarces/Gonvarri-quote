@@ -1,0 +1,20 @@
+<template name="dashboard">
+
+</template>
+
+<template name="notificationList2">
+    <ul class="list-group clear-list m-t">
+        {{#each this}}
+            {{>notificationElement}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="notificationElement2">
+    <li class="list-group-item">
+        <span class="pull-right">
+            {{time}}
+        </span>
+        <span class="label label-{{labelClass}}">{{number}}</span> {{content}}
+    </li>
+</template>

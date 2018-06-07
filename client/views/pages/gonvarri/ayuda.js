@@ -1,0 +1,3 @@
+Template.ayuda.rendered = function(){
+
+}

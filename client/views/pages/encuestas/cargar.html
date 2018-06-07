@@ -1,0 +1,230 @@
+<template name="cargarDatos">
+
+    <!-- Page heading -->
+    {{> pageHeading title='Cargar Datos XLS' category='Encuestas' }}
+
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Generalidades <small>detalles básicos de encuesta</small></h5>
+                        {{>iboxTools}}
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Lista de Datos</h3>
+
+
+                                <form role="form">
+                                    <div class="form-group"><label>Nombre de lista</label> <input type="nombre" placeholder="Nombre de la encuesta" class="form-control"></div>
+                                    <div class="form-group"><label>nombre </label> <input type="text" placeholder="Ingrese el número" class="form-control"></div>
+                                    <div class="form-group"><label>Alias</label> <input type="text" placeholder="Ingrese un identificador de encuesta" class="form-control"></div>
+                                    <div class="form-group"><label>Descripción</label> <input type="text" placeholder="Descrpción de la encuesta" class="form-control"></div>
+                                    <label title="Subir archivo XLS" for="inputImage" class="btn btn-primary">
+                                        <input type="file" accept=".xlsx" name="file" id="inputImage" class="hide">
+                                        Cargar XLS
+                                    </label>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Tabla</h3>
+                                <p>Características de la tabla.</p>
+                                <form role="form">
+                                    <div class="form-group"><label>Nombre de tabla</label> <input type="text" placeholder="Nombre de tabla" class="form-control"></div>
+                                    <div class="form-group"><label>Motor de DB</label> <input type="text" placeholder="InnoDB" class="form-control"></div>
+                                    <div class="form-group"><label>codificacion</label> <input type="text" placeholder="UTF-8" class="form-control"></div>
+                                    <div class="form-group"><label>opciones avanzadas</label> <input type="text" placeholder="SET PRIMARY KEY AUTOINCREMENT" class="form-control"></div>
+                                    <div>
+                                        <button id="xlsguardar" class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Guardar</strong></button>
+                                        <label> <input type="checkbox" class="i-checks"> Ver lista de encuestas </label>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Campo <small>agregar campo a la lista de datos</small></h5>
+                        {{>iboxTools}}
+                    </div>
+                    <div class="ibox-content">
+                      <div class="table-responsive">
+                          <table class="table  table-striped table-hover ">
+                              <thead>
+                              <tr>
+                                  <th>id</th>
+                                  <th>alias</th>
+                                  <th>Tipo BD</th>
+                                  <th>modificado</th>
+                                  <th>campo XLS</th>
+                                  <th>formato</th>
+                                  <th>acciones</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td>1</td>
+                                  <td>nombres_usuario</td>
+                                  <td>VARCHAR</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>B</td>
+                                  <td>texto</td>
+                                  <td>
+                                    <div class="">
+                                        <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                        <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                        <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                        <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                    </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>2</td>
+                                  <td>appellidos_usuario</td>
+                                  <td>VARCHAR</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>D</td>
+                                  <td>texto</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>3</td>
+                                  <td>id_usuario</td>
+                                  <td>VARCHAR</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>E</td>
+                                  <td>texto</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>4</td>
+                                  <td>fecha_cumpleanios</td>
+                                  <td>DATE</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>F</td>
+                                  <td>fecha</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>5</td>
+                                  <td>numero_celular</td>
+                                  <td>VARCHAR</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>G</td>
+                                  <td>texto</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>6</td>
+                                  <td>ingresos_promedio</td>
+                                  <td>INT</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>H</td>
+                                  <td>moneda</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info " title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+                              <tr>
+                                  <td>7</td>
+                                  <td>mensaje_corto</td>
+                                  <td>TEXT</td>
+                                  <td>17 de Marzo de 2017</td>
+                                  <td>I</td>
+                                  <td>texto</td>
+                                  <td>
+                                        <div class="">
+                                            <button type="button" class="btn btn-xs  btn-info" title="previsualizar"> <i class="fa fa-eye"></i></button>
+                                            <button type="button" class="btn btn-xs btn-primary" title="editar"> <i class="fa fa-pencil-square-o"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-warning" title="duplicar"> <i class="fa fa-copy"></i> </button>
+                                            <button type="button" class="btn btn-xs btn-danger" title="eliminar"> <i class="fa fa-times"></i> </button>
+                                        </div>
+                                    </td>
+                              </tr>
+
+
+
+                              </tbody>
+                          </table>
+
+
+                      </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Campos</h3>
+
+                                <form role="form">
+                                    <div class="form-group"><label>Nombre de campo </label> <input type="nombre" placeholder="Nombre del campo en tabla" class="form-control"></div>
+                                    <div class="form-group"><label>Columna del campo en XLS</label> <input type="text" placeholder="Columna en XLS" class="form-control"></div>
+                                    <div class="form-group"><label>Tipo en tabla</label> <select class="form-control m-b" name="validacion">
+                                        <option>Varchar</option>
+                                        <option>text</option>
+                                        <option>INT</option>
+                                        <option>Decimal</option>
+                                        <option>Booleano</option>
+                                        <option>Enum</option>
+                                    </select></div>
+                                    <div class="form-group"><label>Descripción</label> <input type="text" placeholder="Descrpción del campo" class="form-control"></div>
+                                    
+
+                                    <div>
+                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Agregar Campo</strong></button>
+                                    </div>
+                                </form>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</template>
